@@ -2,6 +2,7 @@ project(SecurityTokend)
 
 set(MIG_USER_SOURCE_SUFFIX "Client.cpp")
 set(MIG_SERVER_SOURCE_SUFFIX "Server.cpp")
+set(MIG_XTRACE_SUFFIX "XtraceMig.cpp")
 
 include_directories(
 	${CMAKE_CURRENT_SOURCE_DIR}/mig
@@ -11,7 +12,7 @@ include_directories(
 add_compile_options(
 	-iquote ${CMAKE_CURRENT_BINARY_DIR}/mig
 	-Wno-gcc-compat
-	-Wno-parenthesis
+	-Wno-parentheses
 )
 
 mig(mig/tokend.defs
