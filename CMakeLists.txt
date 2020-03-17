@@ -11,9 +11,9 @@ include_directories(
 
 add_compile_options(
 	-iquote ${CMAKE_CURRENT_BINARY_DIR}/mig
-	-Wno-gcc-compat
-	-Wno-parentheses
 )
+
+add_definitions(-w)
 
 mig(mig/tokend.defs
 	MIG_FLAGS "-cpp"
