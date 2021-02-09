@@ -27,7 +27,7 @@
 //
 #include "tdtransit.h"
 #include "tokend.h"
-#include <CoreServices/../Frameworks/CarbonCore.framework/Headers/MacErrors.h>
+#include <CoreServices/MacErrors.h>
 
 
 namespace Security {
