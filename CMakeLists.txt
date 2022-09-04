@@ -1,5 +1,9 @@
 project(SecurityTokend)
 
+remove_sdk_framework(SecurityTokend
+	PRIVATE
+)
+
 set(MIG_USER_SOURCE_SUFFIX "Client.cpp")
 set(MIG_SERVER_SOURCE_SUFFIX "Server.cpp")
 set(MIG_XTRACE_SUFFIX "XtraceMig.cpp")
@@ -30,11 +34,20 @@ add_darling_static_library(security_tokend_client FAT
 set(DYLIB_COMPAT_VERSION "1.0.0")
 set(DYLIB_CURRENT_VERSION "57740.51.3")
 
+
+set(FRAMEWORK_VERSION "A")
+
+generate_sdk_framework(SecurityTokend
+    VERSION ${FRAMEWORK_VERSION}
+    HEADER "include/SecurityTokend"
+	PRIVATE
+)
+
 add_framework(SecurityTokend
         FAT
 	PRIVATE
         CURRENT_VERSION
-        VERSION "A"
+        VERSION ${FRAMEWORK_VERSION}
 
         SOURCES
 		lib/SecTokend.cpp
