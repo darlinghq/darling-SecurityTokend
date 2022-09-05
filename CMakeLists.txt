@@ -39,7 +39,7 @@ set(FRAMEWORK_VERSION "A")
 
 generate_sdk_framework(SecurityTokend
     VERSION ${FRAMEWORK_VERSION}
-    HEADER "include/SecurityTokend"
+    HEADER "darling-framework/include/SecurityTokend"
 	PRIVATE
 )
 
