@@ -11,7 +11,7 @@ set(MIG_XTRACE_SUFFIX "XtraceMig.cpp")
 include_directories(
 	${CMAKE_CURRENT_SOURCE_DIR}/mig
 	${CMAKE_CURRENT_SOURCE_DIR}/lib
-	${CMAKE_CURRENT_SOURCE_DIR}/../security/OSX/include
+	${CMAKE_CURRENT_SOURCE_DIR}/darling/submodules/security/darling/include/macOS
 )
 
 add_compile_options(
