@@ -27,8 +27,11 @@
 //
 #include "tdtransit.h"
 #include "tokend.h"
-#include <CoreServices/MacErrors.h>
-
+#ifdef DARLING
+#include <CarbonCore/MacErrors.h>
+#else
+#include <CoreServices/../Frameworks/CarbonCore.framework/Headers/MacErrors.h>
+#endif
 
 namespace Security {
 namespace Tokend {

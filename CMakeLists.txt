@@ -11,7 +11,7 @@ set(MIG_XTRACE_SUFFIX "XtraceMig.cpp")
 include_directories(
 	${CMAKE_CURRENT_SOURCE_DIR}/mig
 	${CMAKE_CURRENT_SOURCE_DIR}/lib
-	${CMAKE_CURRENT_SOURCE_DIR}/../security/OSX/include
+	${CMAKE_CURRENT_SOURCE_DIR}/darling/submodules/security/darling/include/macOS
 )
 
 add_compile_options(
@@ -39,7 +39,7 @@ set(FRAMEWORK_VERSION "A")
 
 generate_sdk_framework(SecurityTokend
     VERSION ${FRAMEWORK_VERSION}
-    HEADER "darling-framework/include/SecurityTokend"
+    HEADER "darling/include/SecurityTokend"
 	PRIVATE
 )
 
